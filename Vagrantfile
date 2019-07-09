@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
     kali.vm.box_check_update = true
 
     # set the hostname of the box
-    kali.vm.hostname = "kali"
+    #kali.vm.hostname = "kali"
 
     # [OPTIONAL] comment out to skip
     # create a shared folder between host and vm 
@@ -50,6 +50,9 @@ Vagrant.configure("2") do |config|
       kali.ssh.username = 'root'
     end
 
+    # configure network
+
+    config.vm.network "private_network", ip: "192.168.33.10"
     # configure virtualbox specific settings
     kali.vm.provider :virtualbox do |vbox|
 
@@ -61,9 +64,9 @@ Vagrant.configure("2") do |config|
 
       # configure memory settings according to your needs
       
-      #vbox.memory = "2048"
+      vbox.memory = "2048"
       #vbox.memory = "4096"
-      vbox.memory = "8192"
+      #vbox.memory = "8192"
       
       # configure cpu settings according to your needs
 
@@ -74,6 +77,9 @@ Vagrant.configure("2") do |config|
       # [OPTIONAL] set hidpi
       vbox.customize ['setextradata', :id, 'GUI/HiDPI/UnscaledOutput', '1']
 
+      vbox.customize ["modifyvm", :id, "--accelerate3d", "off"]
+
+      
     end
 
     # Execute Provisioning Scripts
