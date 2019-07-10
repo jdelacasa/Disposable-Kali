@@ -248,7 +248,15 @@ $script_01_information_gathering = <<-SCRIPT
   cd /root/workspace/01-information-Gathering
   git clone https://github.com/mantvydasb/Offensive-Security-OSCP-Cheatsheets.git
   cd Offensive-Security-OSCP-Cheatsheets ; git pull
+ 
+  cd /root/workspace/01-information-Gathering
+  git clone https://github.com/CyDefUnicorn/OSCP-Archives.git
+  cd OSCP-Archives ; git pull
 
+  cd /root/workspace/01-information-Gathering
+  git clone https://github.com/0x4D31/awesome-oscp.git
+  cd awesome-oscp ; git pull
+  
 SCRIPT
 $msg = <<MSG
 ------------------------------------------------------
