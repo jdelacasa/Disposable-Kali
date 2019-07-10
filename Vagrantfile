@@ -93,6 +93,8 @@ Vagrant.configure("2") do |config|
     kali.vm.provision "shell", inline: $script_packages_extra, privileged: true
     kali.vm.provision "shell", inline: $script_tools_prep, privileged: true
     
+    kali.vm.provision "shell", inline: $script_dir_prep, privileged: true
+    kali.vm.provision "shell", inline: $script_01_information_gathering, privileged: true
     # Uncomment this install all updates / upgrades - can be a long process...
     #kali.vm.provision "shell", inline: $script_packages_update, privileged: true
 
@@ -219,7 +221,35 @@ $script_packages_update = <<-SCRIPT
   echo "--- packages_update completed."
 SCRIPT
 
+$script_dir_prep = <<-SCRIPT
 
+  mkdir -p /root/workspace > /dev/null 2>&1
+  mkdir -p /root/workspace/01-information-Gathering > /dev/null 2>&1
+  mkdir -p /root/workspace/02-vulnerability_analisys > /dev/null 2>&1
+  mkdir -p /root/workspace/03-web-application_analisys > /dev/null 2>&1
+  mkdir -p /root/workspace/04-Database_assessment > /dev/null 2>&1
+  mkdir -p /root/workspace/05-Password_attacks > /dev/null 2>&1
+  mkdir -p /root/workspace/doc > /dev/null 2>&1
+
+SCRIPT
+
+$script_01_information_gathering = <<-SCRIPT
+
+  cd /root/workspace/01-information-Gathering 
+  git clone https://github.com/diego-treitos/linux-smart-enumeration.git
+  cd linux-smart-enumeration ; git pull
+
+  echo "Install Sherlock - Find Usernames Across Social Networks"
+  cd /root/workspace/01-information-Gathering
+  git clone https://github.com/sherlock-project/sherlock.git
+  cd sherlock ; git pull
+  pip3 install -r requirements.txt
+ 
+  cd /root/workspace/01-information-Gathering
+  git clone https://github.com/mantvydasb/Offensive-Security-OSCP-Cheatsheets.git
+  cd Offensive-Security-OSCP-Cheatsheets ; git pull
+
+SCRIPT
 $msg = <<MSG
 ------------------------------------------------------
 Your Kali VM is ready!
