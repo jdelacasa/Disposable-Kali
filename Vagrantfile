@@ -94,7 +94,9 @@ Vagrant.configure("2") do |config|
     kali.vm.provision "shell", inline: $script_tools_prep, privileged: true
     
     kali.vm.provision "shell", inline: $script_dir_prep, privileged: true
+    kali.vm.provision "shell", inline: $script_00_doc, privileged: true
     kali.vm.provision "shell", inline: $script_01_information_gathering, privileged: true
+    kali.vm.provision "shell", inline: $script_20_social_media, privileged: true
     # Uncomment this install all updates / upgrades - can be a long process...
     #kali.vm.provision "shell", inline: $script_packages_update, privileged: true
 
@@ -229,8 +231,32 @@ $script_dir_prep = <<-SCRIPT
   mkdir -p /root/workspace/03-web-application_analisys > /dev/null 2>&1
   mkdir -p /root/workspace/04-Database_assessment > /dev/null 2>&1
   mkdir -p /root/workspace/05-Password_attacks > /dev/null 2>&1
-  mkdir -p /root/workspace/doc > /dev/null 2>&1
+  mkdir -p /root/workspace/00-doc > /dev/null 2>&1
+  mkdir -p /root/workspace/20-social-media > /dev/null 2>&1
 
+SCRIPT
+
+$script_00_doc = <<-SCRIPT
+
+  cd /root/workspace/00-doc
+  git clone https://github.com/mantvydasb/Offensive-Security-OSCP-Cheatsheets.git
+  cd Offensive-Security-OSCP-Cheatsheets ; git pull
+ 
+  cd /root/workspace/00-doc
+  git clone https://github.com/CyDefUnicorn/OSCP-Archives.git
+  cd OSCP-Archives ; git pull
+
+  cd /root/workspace/00-doc
+  git clone https://github.com/0x4D31/awesome-oscp.git
+  cd awesome-oscp ; git pull
+
+  cd /root/workspace/00-doc
+  git clone https://github.com/OlivierLaflamme/Cheatsheet-God.git
+  cd Cheatsheet-God ; git pull
+
+  cd /root/workspace/00-doc
+  git clone https://github.com/adon90/pentest_compilation.git
+  cd pentest_compilation ; git pull
 SCRIPT
 
 $script_01_information_gathering = <<-SCRIPT
@@ -246,17 +272,17 @@ $script_01_information_gathering = <<-SCRIPT
   pip3 install -r requirements.txt
  
   cd /root/workspace/01-information-Gathering
-  git clone https://github.com/mantvydasb/Offensive-Security-OSCP-Cheatsheets.git
-  cd Offensive-Security-OSCP-Cheatsheets ; git pull
- 
-  cd /root/workspace/01-information-Gathering
-  git clone https://github.com/CyDefUnicorn/OSCP-Archives.git
-  cd OSCP-Archives ; git pull
+  git clone https://github.com/blackploit/hash-identifier.git
+  cd hash-identifier; git pull
 
-  cd /root/workspace/01-information-Gathering
-  git clone https://github.com/0x4D31/awesome-oscp.git
-  cd awesome-oscp ; git pull
+SCRIPT
+
+
+$script_20_social_media = <<-SCRIPT
   
+  cd /root/workspace/20-social-media
+
+
 SCRIPT
 $msg = <<MSG
 ------------------------------------------------------
