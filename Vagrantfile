@@ -227,6 +227,7 @@ $script_dir_prep = <<-SCRIPT
 
   mkdir -p /root/workspace > /dev/null 2>&1
   mkdir -p /root/workspace/01-information-Gathering > /dev/null 2>&1
+  mkdir -p /root/workspace/01-information-Gathering/WEB > /dev/null 2>&1
   mkdir -p /root/workspace/02-vulnerability_analisys > /dev/null 2>&1
   mkdir -p /root/workspace/03-web-application_analisys > /dev/null 2>&1
   mkdir -p /root/workspace/04-Database_assessment > /dev/null 2>&1
@@ -257,6 +258,11 @@ $script_00_doc = <<-SCRIPT
   cd /root/workspace/00-doc
   git clone https://github.com/adon90/pentest_compilation.git
   cd pentest_compilation ; git pull
+
+  cd /root/workspace/00-doc
+  git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git
+  cd PayloadsAllTheThings ; git pull
+
 SCRIPT
 
 $script_01_information_gathering = <<-SCRIPT
@@ -274,6 +280,10 @@ $script_01_information_gathering = <<-SCRIPT
   cd /root/workspace/01-information-Gathering
   git clone https://github.com/blackploit/hash-identifier.git
   cd hash-identifier; git pull
+
+  cd /root/workspace/01-information-Gathering/WEB
+  git clone https://github.com/al0ne/Vxscan.git
+  cd Vxscan ; pip3 install -r requirements.txt ; git pull
 
 SCRIPT
 
