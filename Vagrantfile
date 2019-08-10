@@ -214,6 +214,7 @@ $script_tools_prep = <<-SCRIPT
   msfdb init 
   searchsploit -u
   gunzip /usr/share/wordlists/rockyou.txt.gz
+  systemctl start tor
   echo "--- tools_prep completed. "
 SCRIPT
 
