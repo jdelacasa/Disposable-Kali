@@ -205,6 +205,26 @@ $script_packages_extra = <<-SCRIPT
   apt-get install wine32 -y
   apt-get install tor -y
   echo "--- packages_extra completed... "
+  echo "--- install nodejs running... "
+  #mkdir  ~/local
+  #mkdir  ~/tmp
+  #echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+  #cd ~/tmp
+  #git clone git://github.com/nodejs/node.git
+  #cd node
+  #./configure –-prefix=~/local
+  #make install
+  #cd ..
+  #git clone git://github.com/npm/npm.git
+  #cd npm
+  #make install
+  #cd ../..
+
+  #apt-get install software-properties-common -y
+  curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+  apt-get install nodejs npm -y
+
+
 SCRIPT
 
 $script_tools_prep = <<-SCRIPT
@@ -243,11 +263,7 @@ SCRIPT
 
 $script_00_doc = <<-SCRIPT
 
-  cd /root/workspace 
-  wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O /root/workspace/ngrok-stable-linux-amd64.zip
-  unzip ngrok-stable-linux-amd64.zip
-
-  cd /root/workspace/00-doc
+   cd /root/workspace/00-doc
   git clone https://github.com/mantvydasb/Offensive-Security-OSCP-Cheatsheets.git
   cd Offensive-Security-OSCP-Cheatsheets ; git pull
  
@@ -305,13 +321,21 @@ SCRIPT
 
 $script_21_anon = <<-SCRIPT
   
+  cd /root/workspace/21-anon 
+  wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O /root/workspace/21-anon/ngrok-stable-linux-amd64.zip
+  unzip ngrok-stable-linux-amd64.zip
+
+  npm install -g beame-insta-ssl
+
   cd /root/workspace/21-anon
   echo "https://serveo.net/" > services.txt
   echo "    ssh -R 80:localhost:3000 serveo.net" >> services.txt
   echo "https://ngrok.com/" >> services.txt
-  echo "    /root/workspace/ngrok help" >> services.txt
-  echo "    /root/workspace/ngrok http 80" >> services.txt
+  echo "    /root/workspace/21-anon/ngrok help" >> services.txt
+  echo "    /root/workspace/21-anon/ngrok http 80" >> services.txt
   echo "    visit http://localhost:4040" >> services.txt
+
+
 
 
 SCRIPT
