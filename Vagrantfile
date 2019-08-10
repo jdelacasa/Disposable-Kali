@@ -97,6 +97,7 @@ Vagrant.configure("2") do |config|
     kali.vm.provision "shell", inline: $script_00_doc, privileged: true
     kali.vm.provision "shell", inline: $script_01_information_gathering, privileged: true
     kali.vm.provision "shell", inline: $script_20_social_media, privileged: true
+    kali.vm.provision "shell", inline: $script_21_anon, privileged: true
     # Uncomment this install all updates / upgrades - can be a long process...
     #kali.vm.provision "shell", inline: $script_packages_update, privileged: true
 
@@ -202,6 +203,7 @@ $script_packages_extra = <<-SCRIPT
   dpkg --add-architecture i386
   apt-get update
   apt-get install wine32 -y
+  apt-get install tor -y
   echo "--- packages_extra completed... "
 SCRIPT
 
@@ -234,10 +236,15 @@ $script_dir_prep = <<-SCRIPT
   mkdir -p /root/workspace/05-Password_attacks > /dev/null 2>&1
   mkdir -p /root/workspace/00-doc > /dev/null 2>&1
   mkdir -p /root/workspace/20-social-media > /dev/null 2>&1
+  mkdir -p /root/workspace/21-anon > /dev/null 2>&1
 
 SCRIPT
 
 $script_00_doc = <<-SCRIPT
+
+  cd /root/workspace 
+  wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O /root/workspace/ngrok-stable-linux-amd64.zip
+  unzip ngrok-stable-linux-amd64.zip
 
   cd /root/workspace/00-doc
   git clone https://github.com/mantvydasb/Offensive-Security-OSCP-Cheatsheets.git
@@ -294,6 +301,20 @@ $script_20_social_media = <<-SCRIPT
 
 
 SCRIPT
+
+$script_21_anon = <<-SCRIPT
+  
+  cd /root/workspace/21-anon
+  echo "https://serveo.net/" > services.txt
+  echo "    ssh -R 80:localhost:3000 serveo.net" >> services.txt
+  echo "https://ngrok.com/" >> services.txt
+  echo "    /root/workspace/ngrok help" >> services.txt
+  echo "    /root/workspace/ngrok http 80" >> services.txt
+  echo "    visit http://localhost:4040" >> services.txt
+
+
+SCRIPT
+
 $msg = <<MSG
 ------------------------------------------------------
 Your Kali VM is ready!
