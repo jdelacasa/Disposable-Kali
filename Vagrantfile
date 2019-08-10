@@ -285,6 +285,13 @@ $script_01_information_gathering = <<-SCRIPT
   git clone https://github.com/al0ne/Vxscan.git
   cd Vxscan ; pip3 install -r requirements.txt ; git pull
 
+  cd /root/workspace/01-information-Gathering
+  pip3 install git+https://github.com/decoxviii/userrecon-py.git
+  cd userrecon-py
+  pip3 install git+https://github.com/decoxviii/userrecon-py.git --upgrade
+
+  echo "" > /root/workspace/01-information-Gathering/userrecon-py
+
 SCRIPT
 
 
