@@ -97,6 +97,7 @@ Vagrant.configure("2") do |config|
     kali.vm.provision "shell", inline: $script_00_doc, privileged: true
     kali.vm.provision "shell", inline: $script_01_information_gathering, privileged: true
     kali.vm.provision "shell", inline: $script_20_social_media, privileged: true
+    kali.vm.provision "shell", inline: $script_21_anon, privileged: true
     # Uncomment this install all updates / upgrades - can be a long process...
     #kali.vm.provision "shell", inline: $script_packages_update, privileged: true
 
@@ -202,7 +203,28 @@ $script_packages_extra = <<-SCRIPT
   dpkg --add-architecture i386
   apt-get update
   apt-get install wine32 -y
+  apt-get install tor -y
   echo "--- packages_extra completed... "
+  echo "--- install nodejs running... "
+  #mkdir  ~/local
+  #mkdir  ~/tmp
+  #echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+  #cd ~/tmp
+  #git clone git://github.com/nodejs/node.git
+  #cd node
+  #./configure –-prefix=~/local
+  #make install
+  #cd ..
+  #git clone git://github.com/npm/npm.git
+  #cd npm
+  #make install
+  #cd ../..
+
+  #apt-get install software-properties-common -y
+  curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+  apt-get install nodejs npm -y
+
+
 SCRIPT
 
 $script_tools_prep = <<-SCRIPT
@@ -212,6 +234,7 @@ $script_tools_prep = <<-SCRIPT
   msfdb init 
   searchsploit -u
   gunzip /usr/share/wordlists/rockyou.txt.gz
+  systemctl start tor
   echo "--- tools_prep completed. "
 SCRIPT
 
@@ -234,12 +257,13 @@ $script_dir_prep = <<-SCRIPT
   mkdir -p /root/workspace/05-Password_attacks > /dev/null 2>&1
   mkdir -p /root/workspace/00-doc > /dev/null 2>&1
   mkdir -p /root/workspace/20-social-media > /dev/null 2>&1
+  mkdir -p /root/workspace/21-anon > /dev/null 2>&1
 
 SCRIPT
 
 $script_00_doc = <<-SCRIPT
 
-  cd /root/workspace/00-doc
+   cd /root/workspace/00-doc
   git clone https://github.com/mantvydasb/Offensive-Security-OSCP-Cheatsheets.git
   cd Offensive-Security-OSCP-Cheatsheets ; git pull
  
@@ -301,6 +325,28 @@ $script_20_social_media = <<-SCRIPT
 
 
 SCRIPT
+
+$script_21_anon = <<-SCRIPT
+  
+  cd /root/workspace/21-anon 
+  wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O /root/workspace/21-anon/ngrok-stable-linux-amd64.zip
+  unzip ngrok-stable-linux-amd64.zip
+
+  npm install -g beame-insta-ssl
+
+  cd /root/workspace/21-anon
+  echo "https://serveo.net/" > services.txt
+  echo "    ssh -R 80:localhost:3000 serveo.net" >> services.txt
+  echo "https://ngrok.com/" >> services.txt
+  echo "    /root/workspace/21-anon/ngrok help" >> services.txt
+  echo "    /root/workspace/21-anon/ngrok http 80" >> services.txt
+  echo "    visit http://localhost:4040" >> services.txt
+
+
+
+
+SCRIPT
+
 $msg = <<MSG
 ------------------------------------------------------
 Your Kali VM is ready!
