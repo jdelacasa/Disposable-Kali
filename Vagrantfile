@@ -343,7 +343,8 @@ $script_21_anon = <<-SCRIPT
   echo "    visit http://localhost:4040" >> services.txt
 
 
-
+  git clone https://github.com/D4Vinci/Cuteit.git
+  cd Cuteit ; git pull
 
 SCRIPT
 
