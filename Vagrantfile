@@ -316,6 +316,12 @@ $script_01_information_gathering = <<-SCRIPT
 
   echo "" > /root/workspace/01-information-Gathering/userrecon-py
 
+  mkdir /usr/share/nmap/scripts/vulnscan
+  cd /usr/share/nmap/scripts/vulscan
+  wget http://www.computec.ch/projekte/vulscan/download/nmap_nse_vulscan-2.0.tar.gz && tar xzf nmap_nse_vulscan-2.0.tar.gz
+
+
+
 SCRIPT
 
 
