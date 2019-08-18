@@ -203,7 +203,7 @@ $script_packages_extra = <<-SCRIPT
   dpkg --add-architecture i386
   apt-get update
   apt-get install wine32 -y
-  apt-get install tor -y
+  apt-get install tor nyx -y
   echo "--- packages_extra completed... "
   echo "--- install nodejs running... "
   #mkdir  ~/local
