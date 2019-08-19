@@ -287,6 +287,10 @@ $script_00_doc = <<-SCRIPT
   git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git
   cd PayloadsAllTheThings ; git pull
 
+  cd /root/workspace/00-doc
+  git clone https://github.com/trimstray/the-book-of-secret-knowledge.git
+  cd the-book-of-secret-knowledge ; git pull
+
 SCRIPT
 
 $script_01_information_gathering = <<-SCRIPT
