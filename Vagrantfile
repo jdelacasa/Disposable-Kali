@@ -204,6 +204,7 @@ $script_packages_extra = <<-SCRIPT
   apt-get update
   apt-get install wine32 -y
   apt-get install tor nyx -y
+  apt-get install bpython -y
   echo "--- packages_extra completed... "
   echo "--- install nodejs running... "
   #mkdir  ~/local
