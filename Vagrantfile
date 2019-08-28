@@ -205,6 +205,7 @@ $script_packages_extra = <<-SCRIPT
   apt-get install wine32 -y
   apt-get install tor nyx -y
   apt-get install bpython -y
+  apt-get install tmux htop
   echo "--- packages_extra completed... "
   echo "--- install nodejs running... "
   #mkdir  ~/local
