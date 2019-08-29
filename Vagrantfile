@@ -294,7 +294,7 @@ $script_00_doc = <<-SCRIPT
   cd the-book-of-secret-knowledge ; git pull
 
   cd /root/workspace/00-doc
-  https://github.com/Ignitetechnologies/Privilege-Escalation.git
+  git clone https://github.com/Ignitetechnologies/Privilege-Escalation.git
   cd Privilege-Escalation ; git pull
   
 SCRIPT

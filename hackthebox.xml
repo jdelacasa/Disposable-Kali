@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetasploitV5>
+<generated time="2019-08-17 10:11:55 UTC" user="root" project="hackthebox" product="framework"/>
+<hosts>
+  <host>
+    <id>1</id>
+    <created-at>2019-08-16 10:37:25 UTC</created-at>
+    <address>10.10.10.140</address>
+    <mac/>
+    <comm></comm>
+    <name/>
+    <state>alive</state>
+    <os-name>Linux</os-name>
+    <os-flavor/>
+    <os-sp>3.X</os-sp>
+    <os-lang/>
+    <arch/>
+    <workspace-id>2</workspace-id>
+    <updated-at>2019-08-16 10:38:41 UTC</updated-at>
+    <purpose>server</purpose>
+    <info/>
+    <comments/>
+    <scope/>
+    <virtual-host/>
+    <note-count>6</note-count>
+    <vuln-count>0</vuln-count>
+    <service-count>2</service-count>
+    <host-detail-count>0</host-detail-count>
+    <exploit-attempt-count>0</exploit-attempt-count>
+    <cred-count>0</cred-count>
+    <detected-arch/>
+    <os-family>Linux</os-family>
+    <host_details>
+    </host_details>
+    <exploit_attempts>
+    </exploit_attempts>
+    <services>
+      <service>
+      <id>1</id>
+      <host-id>1</host-id>
+      <created-at>2019-08-16 10:37:25 UTC</created-at>
+      <port>22</port>
+      <proto>tcp</proto>
+      <state>open</state>
+      <name>ssh</name>
+      <updated-at>2019-08-16 10:38:40 UTC</updated-at>
+      <info>OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 Ubuntu Linux; protocol 2.0</info>
+      </service>
+      <service>
+      <id>2</id>
+      <host-id>1</host-id>
+      <created-at>2019-08-16 10:37:25 UTC</created-at>
+      <port>80</port>
+      <proto>tcp</proto>
+      <state>open</state>
+      <name>http</name>
+      <updated-at>2019-08-16 10:38:41 UTC</updated-at>
+      <info>Apache httpd 2.4.18 (Ubuntu)</info>
+      </service>
+    </services>
+    <notes>
+      <note>
+      <id>1</id>
+      <created-at>2019-08-16 10:38:41 UTC</created-at>
+      <ntype>nmap.nse.ssh-hostkey.tcp.22</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id>1</service-id>
+      <host-id>1</host-id>
+      <updated-at>2019-08-16 10:38:41 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7BiILb3V0cHV0IgG7CiAgMjA0OCBiNjo1NToyYjpkMjo0ZTo4ZjphMzo4MTo3Mjo2MTozNzo5YToxMjpmNjoyNDplYyAoUlNBKQogIDI1NiAyZTozMDowMDo3YTo5MjpmMDo4OTozMDo1OTpjMTo3Nzo1NjphZDo1MTpjMDpiYSAoRUNEU0EpCiAgMjU2IDRjOjUwOmQ1OmYyOjcwOmM1OmZkOmM0OmIyOmYwOmJjOjQyOjIwOjMyOjY0OjM0IChFRDI1NTE5KQ==</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>2</id>
+      <created-at>2019-08-16 10:38:41 UTC</created-at>
+      <ntype>nmap.nse.http-server-header.tcp.80</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id>2</service-id>
+      <host-id>1</host-id>
+      <updated-at>2019-08-16 10:38:41 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7BiILb3V0cHV0IhtBcGFjaGUvMi40LjE4IChVYnVudHUp</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>3</id>
+      <created-at>2019-08-16 10:38:41 UTC</created-at>
+      <ntype>nmap.nse.http-title.tcp.80</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id>2</service-id>
+      <host-id>1</host-id>
+      <updated-at>2019-08-16 10:38:41 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7BiILb3V0cHV0Ig5Ib21lIHBhZ2U=</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>4</id>
+      <created-at>2019-08-16 10:38:41 UTC</created-at>
+      <ntype>host.os.nmap_fingerprint</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id/>
+      <host-id>1</host-id>
+      <updated-at>2019-08-16 10:38:41 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7CToOb3NfdmVuZG9yIgpMaW51eDoOb3NfZmFtaWx5IgpMaW51eDoPb3NfdmVyc2lvbiIIMy5YOhBvc19hY2N1cmFjeWlk</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>5</id>
+      <created-at>2019-08-16 10:38:41 UTC</created-at>
+      <ntype>host.last_boot</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id/>
+      <host-id>1</host-id>
+      <updated-at>2019-08-16 10:38:41 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7BjoJdGltZSIdRnJpIEF1ZyAxNiAwNTozNjo1MCAyMDE5</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>6</id>
+      <created-at>2019-08-16 10:38:41 UTC</created-at>
+      <ntype>host.nmap.traceroute</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id/>
+      <host-id>1</host-id>
+      <updated-at>2019-08-16 10:38:41 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7CCIJcG9ydGkCPQ0iCnByb3RvIgh0Y3AiCWhvcHNbB3sJIgh0dGwiBjEiC2lwYWRkciIPMTAuMTAuMTIuMSIIcnR0Igo0NC41OCIJbmFtZTB7CSIIdHRsIgYyIgtpcGFkZHIiETEwLjEwLjEwLjE0MCIIcnR0Igo0NC43NCIJbmFtZTA=</data>
+      <vuln-id/>
+      </note>
+    </notes>
+    <vulns>
+    </vulns>
+  </host>
+  <host>
+    <id>3</id>
+    <created-at>2019-08-16 11:45:10 UTC</created-at>
+    <address>10.10.10.147</address>
+    <mac/>
+    <comm></comm>
+    <name/>
+    <state>alive</state>
+    <os-name>Linux</os-name>
+    <os-flavor/>
+    <os-sp>3.X</os-sp>
+    <os-lang/>
+    <arch/>
+    <workspace-id>2</workspace-id>
+    <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+    <purpose>server</purpose>
+    <info/>
+    <comments/>
+    <scope/>
+    <virtual-host/>
+    <note-count>7</note-count>
+    <vuln-count>0</vuln-count>
+    <service-count>17</service-count>
+    <host-detail-count>0</host-detail-count>
+    <exploit-attempt-count>0</exploit-attempt-count>
+    <cred-count>0</cred-count>
+    <detected-arch/>
+    <os-family>Linux</os-family>
+    <host_details>
+    </host_details>
+    <exploit_attempts>
+    </exploit_attempts>
+    <services>
+      <service>
+      <id>5</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <port>22</port>
+      <proto>tcp</proto>
+      <state>open</state>
+      <name>ssh</name>
+      <updated-at>2019-08-16 11:45:10 UTC</updated-at>
+      <info>OpenSSH 7.4p1 Debian 10+deb9u6 protocol 2.0</info>
+      </service>
+      <service>
+      <id>6</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <port>80</port>
+      <proto>tcp</proto>
+      <state>open</state>
+      <name>http</name>
+      <updated-at>2019-08-16 11:45:10 UTC</updated-at>
+      <info>Apache httpd 2.4.25 (Debian)</info>
+      </service>
+      <service>
+      <id>7</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>989</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>ftps-data</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>8</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>1046</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>wfremotertm</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>9</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>1047</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>neod1</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>10</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>3703</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>adobeserver-3</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>11</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>5355</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>llmnr</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>12</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>16430</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>13</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>17077</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>14</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>18449</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>15</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>19647</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>16</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>22341</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>17</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>25462</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>18</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>31335</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>trinoo_register</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>19</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>32772</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>sometimes-rpc8</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>20</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>49194</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+      <service>
+      <id>21</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>49213</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+      </service>
+    </services>
+    <notes>
+      <note>
+      <id>13</id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <ntype>nmap.nse.ssh-hostkey.tcp.22</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id>5</service-id>
+      <host-id>3</host-id>
+      <updated-at>2019-08-16 11:45:10 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7BiILb3V0cHV0IgG7CiAgMjA0OCA2ZDo3Yzo4MTozZDo2YTozZDpmOTo1ZjoyZToxZjo2YTo5NzplNTowMDpiYTpkZSAoUlNBKQogIDI1NiA5OTo3ZToxZToyMjo3Njo3MjpkYTozYzpjOTo2MTo3ZDo3NDpkNzo4MDozMzpkMiAoRUNEU0EpCiAgMjU2IDZhOjZiOmMzOjhlOjRiOjI4OmY3OjYwOjg1OmIxOjYyOmZmOjU0OmJjOmQ4OmQ2IChFRDI1NTE5KQ==</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>14</id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <ntype>nmap.nse.http-server-header.tcp.80</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id>6</service-id>
+      <host-id>3</host-id>
+      <updated-at>2019-08-16 11:45:10 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7BiILb3V0cHV0IhtBcGFjaGUvMi40LjI1IChEZWJpYW4p</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>15</id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <ntype>nmap.nse.http-title.tcp.80</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id>6</service-id>
+      <host-id>3</host-id>
+      <updated-at>2019-08-16 11:45:10 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7BiILb3V0cHV0IipBcGFjaGUyIERlYmlhbiBEZWZhdWx0IFBhZ2U6IEl0IHdvcmtz</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>16</id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <ntype>host.os.nmap_fingerprint</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id/>
+      <host-id>3</host-id>
+      <updated-at>2019-08-16 11:45:10 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7CToOb3NfdmVuZG9yIgpMaW51eDoOb3NfZmFtaWx5IgpMaW51eDoPb3NfdmVyc2lvbiIIMy5YOhBvc19hY2N1cmFjeWlk</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>17</id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <ntype>host.last_boot</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id/>
+      <host-id>3</host-id>
+      <updated-at>2019-08-16 11:45:10 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7BjoJdGltZSIdRnJpIEF1ZyAxNiAwMTozMTo0NyAyMDE5</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>19</id>
+      <created-at>2019-08-16 11:57:14 UTC</created-at>
+      <ntype>HTTP_OPTIONS</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id>6</service-id>
+      <host-id>3</host-id>
+      <updated-at>2019-08-16 11:57:14 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>GET,HEAD,POST,OPTIONS,HEAD,HEAD</data>
+      <vuln-id/>
+      </note>
+      <note>
+      <id>18</id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <ntype>host.nmap.traceroute</ntype>
+      <workspace-id>2</workspace-id>
+      <service-id/>
+      <host-id>3</host-id>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <data>BAh7CCIJcG9ydGkC+qkiCnByb3RvIgh1ZHAiCWhvcHNbB3sJIgh0dGwiBjEiC2lwYWRkciIPMTAuMTAuMTIuMSIIcnR0Igo0MS44MyIJbmFtZTB7CSIIdHRsIgYyIgtpcGFkZHIiETEwLjEwLjEwLjE0NyIIcnR0Igo0MS45NiIJbmFtZTA=</data>
+      <vuln-id/>
+      </note>
+    </notes>
+    <vulns>
+    </vulns>
+  </host>
+</hosts>
+<events>
+  <event>
+      <id>6</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 10:37:15 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 10:37:15 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIOd29ya3NwYWNl</info>
+  </event>
+
+  <event>
+      <id>7</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 10:37:22 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 10:37:22 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIZZGJfbm1hcCAxMC4xMC4xMC4xNDA=</info>
+  </event>
+
+  <event>
+      <id>8</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 10:38:05 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 10:38:05 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCINc2VydmljZXM=</info>
+  </event>
+
+  <event>
+      <id>9</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 10:38:08 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 10:38:08 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIKaG9zdHM=</info>
+  </event>
+
+  <event>
+      <id>10</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 10:38:16 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 10:38:16 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIhZGJfbm1hcCAgLUEgLVQ0IDEwLjEwLjEwLjE0MA==</info>
+  </event>
+
+  <event>
+      <id>11</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 10:40:03 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 10:40:03 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIKaG9zdHM=</info>
+  </event>
+
+  <event>
+      <id>12</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 10:40:10 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 10:40:10 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCINc2VydmljZXM=</info>
+  </event>
+
+  <event>
+      <id>20</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:44:45 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 11:44:45 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIOd29ya3NwYWNl</info>
+  </event>
+
+  <event>
+      <id>21</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:44:48 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 11:44:48 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIhZGJfbm1hcCAgLUEgLVQ0IDEwLjEwLjEwLjE0Nw==</info>
+  </event>
+
+  <event>
+      <id>22</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:45:24 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 11:45:24 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCINc2VydmljZXM=</info>
+  </event>
+
+  <event>
+      <id>23</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:45:30 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 11:45:30 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIKaG9zdHM=</info>
+  </event>
+
+  <event>
+      <id>24</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:57:01 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 11:57:01 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIndXNlIGF1eGlsaWFyeS9zY2FubmVyL2h0dHAvb3B0aW9ucw==</info>
+  </event>
+
+  <event>
+      <id>25</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:57:08 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 11:57:08 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIcc2V0IHJob3N0cyAxMC4xMC4xMC4xNDc=</info>
+  </event>
+
+  <event>
+      <id>26</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:57:12 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 11:57:12 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIRc2V0IHJwb3J0IDgw</info>
+  </event>
+
+  <event>
+      <id>27</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:57:14 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 11:57:14 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIMZXhwbG9pdA==</info>
+  </event>
+
+  <event>
+      <id>28</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:57:14 UTC</created-at>
+      <name>module_run</name>
+      <updated-at>2019-08-16 11:57:14 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username>root</username>
+      <info>BAh7CDoQbW9kdWxlX25hbWUiI2F1eGlsaWFyeS9zY2FubmVyL2h0dHAvb3B0aW9uczoQbW9kdWxlX3V1aWQiDWl2ank3eHFoOg5kYXRhc3RvcmV7LyIOV09SS1NQQUNFSSIABjoGRUYiDFZFUkJPU0VJIgpmYWxzZQY7CEYiC1JIT1NUUyIRMTAuMTAuMTAuMTQ3SSIKUlBPUlQGOwhGSSIHODAGOwhGIgpWSE9TVEkiAAY7CEYiCFNTTEkiCmZhbHNlBjsIRkkiDFByb3hpZXMGOwhGSSIABjsIRiIOVXNlckFnZW50IjdNb3ppbGxhLzQuMCAoY29tcGF0aWJsZTsgTVNJRSA2LjA7IFdpbmRvd3MgTlQgNS4xKSIRSHR0cFVzZXJuYW1lIgAiEUh0dHBQYXNzd29yZCIAIhJEaWdlc3RBdXRoSUlTSSIJdHJ1ZQY7CEYiD1NTTFZlcnNpb24iCUF1dG8iFUZpbmdlcnByaW50Q2hlY2tJIgl0cnVlBjsIRiILRE9NQUlOIhBXT1JLU1RBVElPTiIWSHR0cENsaWVudFRpbWVvdXRJIgAGOwhGIg5IdHRwVHJhY2VJIgpmYWxzZQY7CEYiGkhUVFA6OnVyaV9lbmNvZGVfbW9kZSIPaGV4LW5vcm1hbCIXSFRUUDo6dXJpX2Z1bGxfdXJsSSIKZmFsc2UGOwhGIh9IVFRQOjpwYWRfbWV0aG9kX3VyaV9jb3VudEkiBjEGOwhGIiBIVFRQOjpwYWRfdXJpX3ZlcnNpb25fY291bnRJIgYxBjsIRiIeSFRUUDo6cGFkX21ldGhvZF91cmlfdHlwZSIKc3BhY2UiH0hUVFA6OnBhZF91cmlfdmVyc2lvbl90eXBlIgpzcGFjZSIeSFRUUDo6bWV0aG9kX3JhbmRvbV92YWxpZEkiCmZhbHNlBjsIRiIgSFRUUDo6bWV0aG9kX3JhbmRvbV9pbnZhbGlkSSIKZmFsc2UGOwhGIh1IVFRQOjptZXRob2RfcmFuZG9tX2Nhc2VJIgpmYWxzZQY7CEYiH0hUVFA6OnZlcnNpb25fcmFuZG9tX3ZhbGlkSSIKZmFsc2UGOwhGIiFIVFRQOjp2ZXJzaW9uX3JhbmRvbV9pbnZhbGlkSSIKZmFsc2UGOwhGIiFIVFRQOjp1cmlfZGlyX3NlbGZfcmVmZXJlbmNlSSIKZmFsc2UGOwhGIiBIVFRQOjp1cmlfZGlyX2Zha2VfcmVsYXRpdmVJIgpmYWxzZQY7CEYiHkhUVFA6OnVyaV91c2VfYmFja3NsYXNoZXNJIgpmYWxzZQY7CEYiG0hUVFA6OnBhZF9mYWtlX2hlYWRlcnNJIgpmYWxzZQY7CEYiIUhUVFA6OnBhZF9mYWtlX2hlYWRlcnNfY291bnRJIgYwBjsIRiIZSFRUUDo6cGFkX2dldF9wYXJhbXNJIgpmYWxzZQY7CEYiH0hUVFA6OnBhZF9nZXRfcGFyYW1zX2NvdW50SSIHMTYGOwhGIhpIVFRQOjpwYWRfcG9zdF9wYXJhbXNJIgpmYWxzZQY7CEYiIEhUVFA6OnBhZF9wb3N0X3BhcmFtc19jb3VudEkiBzE2BjsIRiIXSFRUUDo6dXJpX2Zha2VfZW5kSSIKZmFsc2UGOwhGIiBIVFRQOjp1cmlfZmFrZV9wYXJhbXNfc3RhcnRJIgpmYWxzZQY7CEYiGUhUVFA6OmhlYWRlcl9mb2xkaW5nSSIKZmFsc2UGOwhGIgxUSFJFQURTSSIGMQY7CEYiEVNob3dQcm9ncmVzc0kiCXRydWUGOwhGIhhTaG93UHJvZ3Jlc3NQZXJjZW50SSIHMTAGOwhG</info>
+  </event>
+
+  <event>
+      <id>29</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 11:57:14 UTC</created-at>
+      <name>module_complete</name>
+      <updated-at>2019-08-16 11:57:14 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username>root</username>
+      <info>BAh7BzoQbW9kdWxlX25hbWUiI2F1eGlsaWFyeS9zY2FubmVyL2h0dHAvb3B0aW9uczoQbW9kdWxlX3V1aWQiDWl2ank3eHFo</info>
+  </event>
+
+  <event>
+      <id>30</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 13:09:27 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 13:09:27 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIlZGJfbm1hcCAtc1UgIC1BIC1UNCAxMC4xMC4xMC4xNDc=</info>
+  </event>
+
+  <event>
+      <id>38</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 13:14:18 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 13:14:18 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCINc2VydmljZXM=</info>
+  </event>
+
+  <event>
+      <id>39</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 13:22:56 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 13:22:56 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCINc2VydmljZXM=</info>
+  </event>
+
+  <event>
+      <id>40</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-16 13:32:29 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-16 13:32:29 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCINc2VydmljZXM=</info>
+  </event>
+
+  <event>
+      <id>41</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-17 10:10:19 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-17 10:10:19 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIOd29ya3NwYWNl</info>
+  </event>
+
+  <event>
+      <id>42</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-17 10:10:23 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-17 10:10:23 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIRd29ya3NwYWNlIC1o</info>
+  </event>
+
+  <event>
+      <id>43</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-17 10:11:31 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-17 10:11:31 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIOZGJfZXhwb3J0</info>
+  </event>
+
+  <event>
+      <id>44</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-17 10:11:36 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-17 10:11:36 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCIRZGJfZXhwb3J0IC1o</info>
+  </event>
+
+  <event>
+      <id>45</id>
+      <workspace-id>2</workspace-id>
+      <host-id/>
+      <created-at>2019-08-17 10:11:55 UTC</created-at>
+      <name>ui_command</name>
+      <updated-at>2019-08-17 10:11:55 UTC</updated-at>
+      <critical/>
+      <seen/>
+      <username/>
+      <info>BAh7BjoMY29tbWFuZCItZGJfZXhwb3J0IC1mIHhtbCAtYSAvcm9vdC9oYWNrdGhlYm94LnhtbA==</info>
+  </event>
+
+</events>
+<services>
+  <service>
+      <id>1</id>
+      <host-id>1</host-id>
+      <created-at>2019-08-16 10:37:25 UTC</created-at>
+      <port>22</port>
+      <proto>tcp</proto>
+      <state>open</state>
+      <name>ssh</name>
+      <updated-at>2019-08-16 10:38:40 UTC</updated-at>
+      <info>OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 Ubuntu Linux; protocol 2.0</info>
+  </service>
+
+  <service>
+      <id>5</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <port>22</port>
+      <proto>tcp</proto>
+      <state>open</state>
+      <name>ssh</name>
+      <updated-at>2019-08-16 11:45:10 UTC</updated-at>
+      <info>OpenSSH 7.4p1 Debian 10+deb9u6 protocol 2.0</info>
+  </service>
+
+  <service>
+      <id>2</id>
+      <host-id>1</host-id>
+      <created-at>2019-08-16 10:37:25 UTC</created-at>
+      <port>80</port>
+      <proto>tcp</proto>
+      <state>open</state>
+      <name>http</name>
+      <updated-at>2019-08-16 10:38:41 UTC</updated-at>
+      <info>Apache httpd 2.4.18 (Ubuntu)</info>
+  </service>
+
+  <service>
+      <id>6</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 11:45:10 UTC</created-at>
+      <port>80</port>
+      <proto>tcp</proto>
+      <state>open</state>
+      <name>http</name>
+      <updated-at>2019-08-16 11:45:10 UTC</updated-at>
+      <info>Apache httpd 2.4.25 (Debian)</info>
+  </service>
+
+  <service>
+      <id>7</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>989</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>ftps-data</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>8</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>1046</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>wfremotertm</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>9</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>1047</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>neod1</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>10</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>3703</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>adobeserver-3</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>11</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>5355</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>llmnr</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>12</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>16430</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>13</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>17077</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>14</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>18449</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>15</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>19647</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>16</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>22341</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>17</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>25462</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>18</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>31335</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>trinoo_register</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>19</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>32772</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>sometimes-rpc8</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>20</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>49194</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+  <service>
+      <id>21</id>
+      <host-id>3</host-id>
+      <created-at>2019-08-16 13:28:56 UTC</created-at>
+      <port>49213</port>
+      <proto>udp</proto>
+      <state>unknown</state>
+      <name>unknown</name>
+      <updated-at>2019-08-16 13:28:56 UTC</updated-at>
+      <info></info>
+  </service>
+
+</services>
+<web_sites>
+</web_sites>
+<web_pages>
+</web_pages>
+<web_forms>
+</web_forms>
+<web_vulns>
+</web_vulns>
+<module_details>
+</module_details>
+</MetasploitV5>
