@@ -205,7 +205,8 @@ $script_packages_extra = <<-SCRIPT
   apt-get install wine32 -y
   apt-get install tor nyx -y
   apt-get install bpython -y
-  apt-get install tmux htop
+  apt-get install tmux htop -y 
+  apt-get install gobuster -y
   echo "--- packages_extra completed... "
   echo "--- install nodejs running... "
   #mkdir  ~/local
