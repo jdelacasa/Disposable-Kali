@@ -96,6 +96,7 @@ Vagrant.configure("2") do |config|
     kali.vm.provision "shell", inline: $script_dir_prep, privileged: true
     kali.vm.provision "shell", inline: $script_00_doc, privileged: true
     kali.vm.provision "shell", inline: $script_01_information_gathering, privileged: true
+    kali.vm.provision "shell", inline: $script_19_auto, privileged: true
     kali.vm.provision "shell", inline: $script_20_social_media, privileged: true
     kali.vm.provision "shell", inline: $script_21_anon, privileged: true
     # Uncomment this install all updates / upgrades - can be a long process...
@@ -259,6 +260,7 @@ $script_dir_prep = <<-SCRIPT
   mkdir -p /root/workspace/04-Database_assessment > /dev/null 2>&1
   mkdir -p /root/workspace/05-Password_attacks > /dev/null 2>&1
   mkdir -p /root/workspace/00-doc > /dev/null 2>&1
+  mkdir -p /root/workspace/19-auto > /dev/null 2>&1
   mkdir -p /root/workspace/20-social-media > /dev/null 2>&1
   mkdir -p /root/workspace/21-anon > /dev/null 2>&1
 
@@ -334,6 +336,19 @@ $script_01_information_gathering = <<-SCRIPT
 
 
 SCRIPT
+
+$script_19_auto = <<-SCRIPT
+  
+  cd /root/workspace/19-auto
+  git clone https://github.com/jm33-m0/mec.git
+  cd mec ; git pull
+  ./install.py
+
+
+
+
+SCRIPT
+
 
 
 $script_20_social_media = <<-SCRIPT
