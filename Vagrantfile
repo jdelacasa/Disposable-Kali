@@ -26,7 +26,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "kali", primary: true do |kali|
 
       #use the offsec base box
-    kali.vm.box = "offensive-security/kali-linux"
+    #kali.vm.box = "offensive-security/kali-linux"
+    kali.vm.box = "kalilinux/rolling"
 
     # [OPTIONAL] set to false to skip
     # gets the latest version of the base box 
