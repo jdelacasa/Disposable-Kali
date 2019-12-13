@@ -227,7 +227,8 @@ $script_packages_extra = <<-SCRIPT
 
   #apt-get install software-properties-common -y
   curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-  apt-get install nodejs npm -y
+  #apt-get install nodejs npm -y
+  apt-get install nodejs -y
 
 
 SCRIPT
