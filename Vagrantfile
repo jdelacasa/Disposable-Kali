@@ -209,6 +209,7 @@ $script_packages_extra = <<-SCRIPT
   apt-get install bpython -y
   apt-get install tmux htop -y 
   apt-get install gobuster -y
+  apt-get install python3-pip -y
   echo "--- packages_extra completed... "
   echo "--- install nodejs running... "
   #mkdir  ~/local
@@ -336,6 +337,8 @@ $script_01_information_gathering = <<-SCRIPT
   wget http://www.computec.ch/projekte/vulscan/download/nmap_nse_vulscan-2.0.tar.gz && tar xzf nmap_nse_vulscan-2.0.tar.gz
 
 
+  # shodan cli
+  pip3 install shodan
 
 SCRIPT
 
